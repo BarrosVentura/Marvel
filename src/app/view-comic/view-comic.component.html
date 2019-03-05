@@ -1,0 +1,18 @@
+<section class="view-comic" >
+  <div class="container-fluid row">
+    <div class="col-sm comic-img">
+        <img class="mx-auto d-block" [src]= "comic.thumbnail.path + '.' + comic.thumbnail.extension " alt="">
+      </div>
+      <div class="col-sm description" >
+        <h1>{{comic.title}}</h1>
+        <p *ngIf="comic.description != null ; else elseBlock" >{{comic.description}}</p>
+        <ng-template #elseBlock> <p>This comic does not have a description as of now, please comeback later.</p> </ng-template>
+        <div class="price" *ngIf="comic.prices.price != 0; else elsePrice">
+          <p >Price: ${{comic.prices[0].price}} </p>
+          <a href="" class="marker" >Buy!</a>
+        </div>
+        <ng-template #elsePrice> <p>Comic not available at this moment</p> </ng-template>
+        <a href="/comics"  class="marker go-back">Go Back</a>
+      </div>
+  </div>
+</section>

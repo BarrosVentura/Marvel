@@ -1,0 +1,45 @@
+.view-comic{
+    margin-top: 40px;
+}
+
+.comic-img img{
+    width: 480px;
+    height: 780px;
+    object-fit: cover;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.description h1{
+    font-size: 38px;
+    font-weight: 700;
+}
+
+.description p{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.marker{
+    box-sizing: border-box;
+    width: 220px;
+    color: #010507;
+    border: 2px solid;
+    background: #F2EF7D;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 36px;
+    font-family: 'Bangers', cursive;
+    position: relative;
+    padding: 5px 40px;
+    text-decoration: none;
+}
+
+.marker:hover{
+    color: #FFF;
+    background-color: #ED1D24;
+    cursor: pointer;
+}
+
+.price{
+    margin-bottom: 40px;
+}

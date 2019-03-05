@@ -1,0 +1,33 @@
+<section class="top-read" >
+  <div class="container-fluid" >
+    <div class="marker" >
+      The Top Read!
+    </div>
+    <ul class="row top-category" >
+      <a href="" class="col-lg-2 top-product" *ngFor = "let comic of topReadComics" routerLink="/comic-detail/{{comic.id}}">
+        <li>
+          <img class="comic mx-auto d-block" [src]= "comic.thumbnail.path + '.' + comic.thumbnail.extension " alt="">
+          <h3>{{comic.title}}</h3>
+        </li>
+      </a>
+    </ul>
+  </div>
+</section>
+
+<section class="all-comics" >
+  <div class="container " >
+    <ul class="row category " >
+      <a href="" class="col-lg-2 product" *ngFor = "let comic of comics" routerLink="/comic-detail/{{comic.id}}">
+        <li>
+          <div class="comic mx-auto d-block ">
+              <img class="comic mx-auto d-block" [src]= "comic.thumbnail.path + '.' + comic.thumbnail.extension "  alt="">
+              <div class="marker-rare" *ngIf= "comic.rare" >
+                Rare!
+              </div>
+          </div>
+          <h3>{{comic.title}}</h3>
+        </li>
+      </a>
+    </ul>
+  </div>
+</section>
